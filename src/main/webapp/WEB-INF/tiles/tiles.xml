@@ -5,9 +5,15 @@
 
 	<!-- tiles 적용 -->
 	<definition name="defaultLayout" template="/WEB-INF/views/inc/layout/defaultLayout.jsp">
-		<put-attribute name="header" value="/WEB-INF/views/inc/parts/header.jsp" />
+		<put-attribute name="header" value="/WEB-INF/views/inc/parts/default/header.jsp" />
 		<put-attribute name="main" value="" />
-		<put-attribute name="footer" value="/WEB-INF/views/inc/parts/footer.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/views/inc/parts/default/footer.jsp" />
+	</definition>
+	
+	<definition name="managerLayout" template="/WEB-INF/views/inc/layout/managerLayout.jsp">
+		<put-attribute name="header" value="/WEB-INF/views/inc/parts/mgr/header.jsp" />
+		<put-attribute name="aside" value="/WEB-INF/views/inc/parts/mgr/aside.jsp" />
+		<put-attribute name="main" value="" />
 	</definition>
  
 	
@@ -16,6 +22,14 @@
 	</definition>
 	
 	<definition name="*.main" extends="defaultLayout">
+		<put-attribute name="main" value="/WEB-INF/views/{1}.jsp" />
+	</definition>
+	
+	<definition name="*/*.mgr" extends="managerLayout">
+		<put-attribute name="main" value="/WEB-INF/views/{1}/{2}.jsp" />
+	</definition>
+	
+	<definition name="*.mgr" extends="managerLayout">
 		<put-attribute name="main" value="/WEB-INF/views/{1}.jsp" />
 	</definition>
 </tiles-definitions>

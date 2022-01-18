@@ -19,8 +19,13 @@
 .flex.justify-between{
 	justify-content: space-between;
 }
+
 .flex.item-center{
 	align-items: center;
+}
+
+.flex.dir-col{
+	flex-direction: column;
 }
 
 .flex > .ratio-1{
@@ -70,4 +75,20 @@
 }
 .btn.point-btn:active {
 	background: var(--color-point-active);
+}
+
+/* 높이 */
+.h-100p{
+	height: 100%;
+}
+
+.w-100p{
+	width: 100%;
+}
+
+.user-name{
+	padding: 8px 0;
+}
+.user-name span{
+	color: var(--color-point);
 }

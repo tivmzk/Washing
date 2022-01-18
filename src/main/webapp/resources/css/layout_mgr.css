@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+#header{
+	height: 8vh;
+	padding: 0 20px;
+	border-bottom: 1px solid var(--color-gray);
+}
+
+#aside{
+	border-right: 1px solid var(--color-gray);
+	height: 100%;
+}
+
+#aside ul li a{
+	padding: 15px 20px;
+	user-select: none;
+	display: block;
+	border-bottom: var(--color-gray) 1px solid;
+}
+#aside ul li a:hover{
+	background: var(--color-gray);
+}
+#aside ul li a.here{
+	background: var(--color-point);
+	color: var(--color-white);
+	border: var(--color-point-active) 1px solid;
+}
+
+#main{
+	height: 100%;
+}
+
+.wrapper{
+	height: 92vh;
+}

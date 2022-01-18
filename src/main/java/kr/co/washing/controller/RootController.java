@@ -10,4 +10,14 @@ public class RootController {
 	public String index() {
 		return "index.main";
 	}
+	
+	@GetMapping("/sub")
+	public String subscription() {
+		return "sub.main";
+	}
+	
+	@GetMapping("/faq")
+	public String faq() {
+		return "faq.main";
+	}
 }
