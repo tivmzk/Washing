@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
     
 <div class="bound flex justify-between">
 	<div class="ratio-2">
@@ -13,6 +14,13 @@
 		</ul>
 	</div>
 	<div class="ratio-2 text-right item-center">
-		<a href="/ac/select" class="btn point-btn">로그인</a>
+		<c:choose>
+			<c:when test="${sessionScope.user != null}">
+				<span>${sessionScope.user.name}</span>님
+			</c:when>
+			<c:otherwise>
+				<a href="/ac/select" class="btn point-btn">로그인</a>
+			</c:otherwise>
+		</c:choose>
 	</div>
 </div>
