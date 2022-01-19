@@ -8,12 +8,12 @@
 	<settings>
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 	</settings>
-	<!-- <typeAliases>
-		<package name="" />
+	<typeAliases>
+		<package name="kr.co.washing.model" />
 	</typeAliases>
-	alias를 사용할 파일 위치
+	<!-- alias를 사용할 파일 위치 -->
 	<mappers>
-
-	</mappers> -->
+		<mapper resource="mappers/member.xml"/>
+	</mappers>
 
 </configuration>
