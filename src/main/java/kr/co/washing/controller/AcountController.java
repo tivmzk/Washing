@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
-import kr.co.washing.SiteLoginer;
 import kr.co.washing.model.Member;
 import kr.co.washing.model.NaverLoginVO;
 import kr.co.washing.service.MemberService;
+import kr.co.washing.util.SiteLoginer;
 
 @RequestMapping("/ac")
 @Controller
@@ -34,6 +34,19 @@ public class AcountController {
 	@GetMapping("/login")
 	public String login() {
 		return path + "login.main";
+	}
+	
+	@PostMapping("/login")
+	public String login(Member item, HttpSession session) {
+		Member user = service.item(item);
+		
+		if(user == null) {
+			return "redirect:login";
+		}
+		else {
+			session.setAttribute("user", user);
+			return "redirect:/";
+		}
 	}
 
 	@GetMapping("/select")

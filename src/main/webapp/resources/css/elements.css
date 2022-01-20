@@ -19,6 +19,9 @@
 .flex.justify-between{
 	justify-content: space-between;
 }
+.flex.justify-center{
+	justify-content: center;
+}
 
 .flex.item-center{
 	align-items: center;
@@ -91,4 +94,15 @@
 }
 .user-name span{
 	color: var(--color-point);
+}
+
+.pagnation li a{
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.pagnation li a:hover{
+	text-decoration: underline;
+}
+.pagnation .active{
+	background: var(--color-gray);
 }

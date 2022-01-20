@@ -1,4 +1,4 @@
-package kr.co.washing;
+package kr.co.washing.util;
 
 import java.io.IOException;
 import java.util.Map;

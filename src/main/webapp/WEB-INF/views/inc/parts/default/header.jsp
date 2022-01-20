@@ -11,12 +11,18 @@
 			<li><a href="/sub">구독하기</a></li>
 			<li><a href="/review/list">리뷰</a></li>
 			<li><a href="/faq">FAQ</a></li>
+			<c:if test="${sessionScope.user.level == 1}">
+				<li><a href="/mgr/mem">관리</a></li>
+			</c:if>
 		</ul>
 	</div>
 	<div class="ratio-2 text-right item-center">
 		<c:choose>
 			<c:when test="${sessionScope.user != null}">
-				<span>${sessionScope.user.name}</span>님
+				<div class="user-name">
+					<span>${sessionScope.user.name}</span>님
+					<a href="/ac/logout">로그아웃</a>
+				</div>
 			</c:when>
 			<c:otherwise>
 				<a href="/ac/select" class="btn point-btn">로그인</a>
