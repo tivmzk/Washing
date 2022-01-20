@@ -17,4 +17,6 @@ public interface MemberDao {
 
 	void delete(String email);
 
+	void update(Member item);
+
 }

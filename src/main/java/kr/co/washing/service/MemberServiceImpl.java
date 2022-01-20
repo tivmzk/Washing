@@ -31,5 +31,9 @@ public class MemberServiceImpl implements MemberService {
 	public void delete(String email) {
 		dao.delete(email);
 	}
+	@Override
+	public void update(Member item) {
+		dao.update(item);
+	}
 
 }

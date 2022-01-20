@@ -15,4 +15,6 @@ public interface MemberService {
 
 	void delete(String email);
 
+	void update(Member item);
+
 }

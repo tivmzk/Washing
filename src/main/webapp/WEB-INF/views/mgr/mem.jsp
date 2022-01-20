@@ -1,7 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-
+<script>
+	const max = 1;
+	const min = 0;
+	const path = '/rest/mem';
+</script>
+<script src="/re/js/member_alt.js"></script>
 <table>
 	<thead>
 		<tr>
@@ -15,10 +20,10 @@
 	<tbody>
 		<c:forEach items="${list}" var="item">
 			<tr>
-				<td>${item.email}</td>
+				<td class="key">${item.email}</td>
 				<td>${item.password}</td>
 				<td>${item.name}</td>
-				<td>${item.level}</td>
+				<td class="selectable">${item.level}</td>
 				<td><a href="mem/delete/${item.email}">탈퇴</a></td>
 			</tr>
 		</c:forEach>

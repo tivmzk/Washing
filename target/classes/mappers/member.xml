@@ -43,4 +43,10 @@
 		DELETE FROM member
 		WHERE email=#{email}
 	</delete>
+	<update id="update">
+		UPDATE member
+		SET
+		level=#{level}
+		WHERE email=#{email}
+	</update>
 </mapper>
