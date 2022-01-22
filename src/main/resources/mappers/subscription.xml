@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="subscription">
+	<sql id="search">
+		<where>
+			<if test="search == 1">
+				email LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="search == 2">
+				week LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="search == 3">
+				tel LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="search == 4">
+				address LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="search == 5">
+				request LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="search == 6">
+				date LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+		</where>
+	</sql>
+
+	<insert id="add">
+		INSERT INTO subscription
+		VALUES(NULL, #{email}, #{week}, #{tel}, #{address}, #{request}, #{date})
+	</insert>
+	<select id="item" resultType="Subscription">
+		SELECT *
+		FROM subscription
+		WHERE scode=#{scode}
+	</select>
+	<select id="total" resultType="Integer">
+		SELECT COUNT(*)
+		FROM subscription
+		<include refid="search" />
+	</select>
+	<select id="list" resultType="Subscription">
+		SELECT *
+		FROM subscription
+		<include refid="search" />
+		LIMIT #{offset}, #{perPage}
+	</select>
+	<delete id="delete">
+		DELETE FROM subscription
+		WHERE scode=#{scode}
+	</delete>
+	<update id="update">
+		UPDATE subscription
+		SET
+		week=#{week},
+		tel=#{tel},
+		address=#{address},
+		request=#{request}
+		WHERE scode=#{scode}
+	</update>
+</mapper>

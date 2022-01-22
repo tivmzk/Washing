@@ -24,6 +24,12 @@
 	--color-point-hover: #98c2f6;
 	--color-point-active: #7590dd;
 	--color-point: #87aeee;
+	--color-update-hover: #8be576;
+	--color-update-active: #75d25b;
+	--color-update: #74db66;
+	--color-delete-hover: #ef5c3f;
+	--color-delete-active: #da2021;
+	--color-delete: #e93030;
 	--color-gray: #e6e6e6;
 }
 

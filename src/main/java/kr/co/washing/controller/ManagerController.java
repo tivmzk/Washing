@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.washing.model.Member;
+import kr.co.washing.model.Subscription;
 import kr.co.washing.service.MemberService;
+import kr.co.washing.service.SubscriptionService;
 import kr.co.washing.util.Pager;
 
 @RequestMapping("/mgr")
@@ -20,6 +22,8 @@ public class ManagerController {
 	
 	@Autowired
 	MemberService ms;
+	@Autowired
+	SubscriptionService ss;
 	
 	@GetMapping("/mem")
 	public String member(Pager pager, Model model) {
@@ -35,7 +39,9 @@ public class ManagerController {
 	}
 	
 	@GetMapping("/sub")
-	public String subscription() {
+	public String subscription(Pager pager, Model model) {
+		List<Subscription> list = ss.list(pager);
+		model.addAttribute("list", list);
 		return path + "sub.mgr";
 	}
 	

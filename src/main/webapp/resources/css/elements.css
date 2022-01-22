@@ -66,18 +66,46 @@
 .btn{
 	display: inline-block;
 	padding: 10px 20px;
+	border-radius: 15px;
+	cursor: pointer;
+}
+.btn.mini-btn{
+	padding: 5px 10px;
+	font-size: var(--font-size-small);
+	border-radius: 8px;
 }
 
 .btn.point-btn{
 	background: var(--color-point);
 	color: var(--color-white);
-	border-radius: 15px;
 }
 .btn.point-btn:hover {
 	background: var(--color-point-hover);
 }
 .btn.point-btn:active {
 	background: var(--color-point-active);
+}
+
+.btn.update-btn{
+	background: var(--color-update);
+	color: var(--color-white);
+}
+.btn.update-btn:hover {
+	background: var(--color-update-hover);
+}
+.btn.update-btn:active {
+	background: var(--color-update-active);
+}
+
+.btn.delete-btn{
+	background: var(--color-delete);
+	color: var(--color-white);
+}
+.btn.delete-btn:hover {
+	background: var(--color-delete-hover);
+}
+.btn.delete-btn:active {
+	background: var(--color-delete-active);
 }
 
 /* 높이 */
@@ -105,4 +133,22 @@
 }
 .pagnation .active{
 	background: var(--color-gray);
+}
+#modal{
+	top: 0px;
+	left: 0px;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: rgb(0, 0, 0, 0.5);
+}
+#modal ul{
+	position: fixed;
+	padding: 20px 30px;
+	border-radius: 15px;
+	background: var(--color-white);
+	box-shadow: 2px 2px 5px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
