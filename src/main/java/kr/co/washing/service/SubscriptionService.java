@@ -13,4 +13,6 @@ public interface SubscriptionService {
 
 	void update(Subscription item);
 
+	void delete(int code);
+
 }

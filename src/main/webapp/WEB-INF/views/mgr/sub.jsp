@@ -29,7 +29,7 @@
 				<td>${item.address}</td>
 				<td>${item.request}</td>
 				<td><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
-				<td><span class="btn update-btn mini-btn modal-btn copy-btn">수정</span><span class="btn delete-btn mini-btn">삭제</span></td>
+				<td><span class="btn update-btn mini-btn modal-btn copy-btn">수정</span><a href="sub/delete/${item.scode}?page=${pager.page}" class="btn delete-btn mini-btn">삭제</a></td>
 			</tr>
 		</c:forEach>
 	</tbody>

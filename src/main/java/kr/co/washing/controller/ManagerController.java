@@ -33,9 +33,9 @@ public class ManagerController {
 	}
 	
 	@GetMapping("/mem/delete/{email}")
-	public String member(@PathVariable String email) {
+	public String member(@PathVariable String email, int page) {
 		ms.delete(email);
-		return "redirect:/mgr/mem";
+		return "redirect:/mgr/mem?page="+page;
 	}
 	
 	@GetMapping("/sub")
@@ -43,6 +43,12 @@ public class ManagerController {
 		List<Subscription> list = ss.list(pager);
 		model.addAttribute("list", list);
 		return path + "sub.mgr";
+	}
+	
+	@GetMapping("/sub/delete/{code}")
+	public String subscription(@PathVariable int code, int page) {
+		ss.delete(code);
+		return "redirect:/mgr/sub?page="+page;
 	}
 	
 	@GetMapping("/faq")

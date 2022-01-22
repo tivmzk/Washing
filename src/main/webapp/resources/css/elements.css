@@ -141,6 +141,7 @@
 	width: 100vw;
 	height: 100vh;
 	background: rgb(0, 0, 0, 0.5);
+	display: none;
 }
 #modal ul{
 	position: fixed;

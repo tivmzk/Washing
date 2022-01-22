@@ -15,4 +15,6 @@ public interface SubscriptionDao {
 
 	void update(Subscription item);
 
+	void delete(int code);
+
 }

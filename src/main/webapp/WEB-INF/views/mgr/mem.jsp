@@ -24,7 +24,7 @@
 				<td>${item.password}</td>
 				<td>${item.name}</td>
 				<td class="selectable">${item.level}</td>
-				<td><a href="mem/delete/${item.email}">탈퇴</a></td>
+				<td><a href="mem/delete/${item.email}?page=${pager.page}" class="btn delete-btn mini-btn">탈퇴</a></td>
 			</tr>
 		</c:forEach>
 	</tbody>
