@@ -22,14 +22,17 @@
 	<tbody>
 		<c:forEach items="${list}" var="item">
 			<tr data-code="${item.scode}">
-				<td>${item.scode}</td>
-				<td>${item.email}</td>
-				<td>${item.week}</td>
-				<td>${item.tel}</td>
-				<td>${item.address}</td>
-				<td>${item.request}</td>
-				<td><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
-				<td><span class="btn update-btn mini-btn modal-btn copy-btn">수정</span><a href="sub/delete/${item.scode}?page=${pager.page}" class="btn delete-btn mini-btn">삭제</a></td>
+				<td data-name="scode">${item.scode}</td>
+				<td data-name="email">${item.email}</td>
+				<td data-name="week">${item.week}</td>
+				<td data-name="tel">${item.tel}</td>
+				<td data-name="address">${item.address}</td>
+				<td data-name="request">${item.request}</td>
+				<td data-name="date"><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
+				<td>
+					<span class="btn update-btn mini-btn update-modal-btn copy-btn">수정</span>
+					<a href="sub/delete/${item.scode}?page=${pager.page}" class="btn delete-btn mini-btn">삭제</a>
+				</td>
 			</tr>
 		</c:forEach>
 	</tbody>
@@ -55,19 +58,15 @@
 	</ul>
 </div>
 
-<div id="modal">
+<div class="modal update-modal">
 	<ul>
-		<li>
+		<li class="hidden">
 			<label>일련번호</label>
-			<input class="scode" type="number" disabled="disabled"/>
-		</li>
-		<li>
-			<label>이메일</label>
-			<input class="email" type="email" disabled="disabled"/>
+			<input name="scode" type="number" disabled="disabled"/>
 		</li>
 		<li>
 			<label>서비스 주기</label>
-			<select class="week select">
+			<select name="week" class="select">
 				<option value="1">1</option>
 				<option value="2">2</option>
 				<option value="3">3</option>
@@ -76,15 +75,15 @@
 		</li>
 		<li>
 			<label>전화번호</label>
-			<input class="tel" type="tel" />
+			<input name="tel" type="tel" />
 		</li>
 		<li>
 			<label>주소</label>
-			<input class="address" type="text" />
+			<input name="address" type="text" />
 		</li>
 		<li>
 			<label>요청사항</label>
-			<input class="request" type="text" />
+			<input name="request" type="text" />
 		</li>
 		<li>
 			<button>확인</button>

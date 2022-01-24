@@ -16,6 +16,7 @@
 		<mapper resource="mappers/member.xml"/>
 		<mapper resource="mappers/subscription.xml"/>
 		<mapper resource="mappers/review.xml"/>
+		<mapper resource="mappers/faq.xml"/>
 	</mappers>
 
 </configuration>

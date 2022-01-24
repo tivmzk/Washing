@@ -134,7 +134,9 @@
 .pagnation .active{
 	background: var(--color-gray);
 }
-#modal{
+
+/* 모달 */
+.modal{
 	top: 0px;
 	left: 0px;
 	position: fixed;
@@ -143,7 +145,7 @@
 	background: rgb(0, 0, 0, 0.5);
 	display: none;
 }
-#modal ul{
+.modal ul{
 	position: fixed;
 	padding: 20px 30px;
 	border-radius: 15px;
@@ -152,4 +154,8 @@
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+}
+
+.hidden{
+	display: none;
 }
