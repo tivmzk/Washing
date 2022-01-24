@@ -10,8 +10,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import kr.co.washing.model.Member;
+import kr.co.washing.model.Review;
 import kr.co.washing.model.Subscription;
 import kr.co.washing.service.MemberService;
+import kr.co.washing.service.ReviewService;
 import kr.co.washing.service.SubscriptionService;
 import kr.co.washing.util.Pager;
 
@@ -24,6 +26,8 @@ public class ManagerController {
 	MemberService ms;
 	@Autowired
 	SubscriptionService ss;
+	@Autowired
+	ReviewService rs;
 	
 	@GetMapping("/mem")
 	public String member(Pager pager, Model model) {
@@ -57,7 +61,14 @@ public class ManagerController {
 	}
 	
 	@GetMapping("/rev")
-	public String review() {
+	public String review(Model model, Pager pager) {
+		List<Review> list = rs.list(pager);
+		model.addAttribute("list", list);
 		return path + "rev.mgr";
+	}
+	@GetMapping("/rev/delete/{rcode}")
+	public String review(@PathVariable String rcode, int page) {
+		rs.delete(rcode);
+		return "redirect:/mgr/rev?page="+page;
 	}
 }

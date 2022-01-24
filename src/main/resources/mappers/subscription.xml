@@ -29,7 +29,7 @@
 
 	<insert id="add">
 		INSERT INTO subscription
-		VALUES(NULL, #{email}, #{week}, #{tel}, #{address}, #{request}, #{date})
+		VALUES(NULL, #{email}, #{week}, #{tel}, #{address}, #{request}, NOW())
 	</insert>
 	<select id="item" resultType="Subscription">
 		SELECT *

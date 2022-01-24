@@ -15,6 +15,7 @@
 	<mappers>
 		<mapper resource="mappers/member.xml"/>
 		<mapper resource="mappers/subscription.xml"/>
+		<mapper resource="mappers/review.xml"/>
 	</mappers>
 
 </configuration>
