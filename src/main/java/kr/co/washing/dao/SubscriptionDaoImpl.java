@@ -38,4 +38,9 @@ public class SubscriptionDaoImpl implements SubscriptionDao {
 	public void delete(int scode) {
 		sql.delete("subscription.delete", scode);
 	}
+
+	@Override
+	public void add(Subscription item) {
+		sql.insert("subscription.add", item);
+	}
 }

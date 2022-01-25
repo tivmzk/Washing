@@ -30,6 +30,9 @@
 	--color-delete-hover: #ef5c3f;
 	--color-delete-active: #da2021;
 	--color-delete: #e93030;
+	--color-confirm-hover: #3152a6;
+	--color-confirm-active: #1d2988;
+	--color-confirm: #254097;
 	--color-gray: #e6e6e6;
 }
 

@@ -35,4 +35,9 @@ public class SubscriptionServiceImpl implements SubscriptionService {
 	public void delete(int code) {
 		dao.delete(code);
 	}
+
+	@Override
+	public void add(Subscription item) {
+		dao.add(item);
+	}
 }

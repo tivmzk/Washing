@@ -5,12 +5,20 @@ import java.util.Date;
 public class Subscription {
 	private int scode;
 	private String email;
+	private String recipient;
 	private int week;
 	private String tel;
 	private String address;
 	private String request;
 	private Date date;
 	
+	
+	public String getRecipient() {
+		return recipient;
+	}
+	public void setRecipient(String recipient) {
+		this.recipient = recipient;
+	}
 	public int getScode() {
 		return scode;
 	}

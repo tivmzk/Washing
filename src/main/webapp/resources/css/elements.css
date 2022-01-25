@@ -68,6 +68,7 @@
 	padding: 10px 20px;
 	border-radius: 15px;
 	cursor: pointer;
+	border: none;
 }
 .btn.mini-btn{
 	padding: 5px 10px;
@@ -106,6 +107,17 @@
 }
 .btn.delete-btn:active {
 	background: var(--color-delete-active);
+}
+
+.btn.confirm-btn{
+	background: var(--color-confirm);
+	color: var(--color-white);
+}
+.btn.confirm-btn:hover {
+	background: var(--color-confirm-hover);
+}
+.btn.confirm-btn:active {
+	background: var(--color-confirm-active);
 }
 
 /* 높이 */
