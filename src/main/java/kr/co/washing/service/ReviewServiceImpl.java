@@ -26,4 +26,14 @@ public class ReviewServiceImpl implements ReviewService {
 		dao.delete(rcode);
 	}
 
+	@Override
+	public void add(Review item) {
+		dao.add(item);
+	}
+
+	@Override
+	public Review item(int rcode) {
+		return dao.item(rcode);
+	}
+
 }

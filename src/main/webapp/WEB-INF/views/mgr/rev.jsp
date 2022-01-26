@@ -17,7 +17,8 @@
 			<tr>
 				<td class="key">${item.rcode}</td>
 				<td>${item.email}</td>
-				<td>${item.title}</td>
+				<td>${item.name}</td>
+				<td>${item.contents}</td>
 				<td><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd hh:mm:ss"/></td>
 				<td><a href="rev/delete/${item.rcode}?page=${pager.page}" class="btn delete-btn mini-btn">삭제</a></td>
 			</tr>

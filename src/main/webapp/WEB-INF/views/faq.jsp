@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <div>
 	<div class="bound">
-		<h5>자주 묻는 질문</h5>
+		<span>자주 묻는 질문</span>
 		<h1>무엇을 도와드릴까요?</h1>
 		<div>
 			<input type="text" />

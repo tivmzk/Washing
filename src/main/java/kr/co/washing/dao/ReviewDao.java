@@ -13,4 +13,8 @@ public interface ReviewDao {
 
 	void delete(String rcode);
 
+	void add(Review item);
+
+	Review item(int rcode);
+
 }

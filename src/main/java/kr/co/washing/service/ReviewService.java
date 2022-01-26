@@ -11,4 +11,8 @@ public interface ReviewService {
 
 	void delete(String rcode);
 
+	void add(Review item);
+
+	Review item(int code);
+
 }

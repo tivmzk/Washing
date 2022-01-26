@@ -20,11 +20,12 @@
 
 	<insert id="add">
 		INSERT INTO review
-		VALUES(NULL, #{email}, #{title}, #{contents}, NOW())
+		VALUES(NULL, #{email}, #{contents}, NOW())
 	</insert>
 	<select id="item" resultType="Review">
-		SELECT *
+		SELECT review.*, member.name
 		FROM review
+		JOIN member USING(email) 
 		WHERE rcode=#{rcode}
 	</select>
 	<select id="total" resultType="Integer">
@@ -33,8 +34,9 @@
 		<include refid="search" />
 	</select>
 	<select id="list" resultType="Review">
-		SELECT *
+		SELECT review.*, member.name
 		FROM review
+		JOIN member USING(email) 
 		<include refid="search" />
 		LIMIT #{offset}, #{perPage}
 	</select>
@@ -45,7 +47,6 @@
 	<update id="update">
 		UPDATE review
 		SET
-		title=#{title},
 		contents=#{contents}
 		WHERE rcode=#{rcode}
 	</update>

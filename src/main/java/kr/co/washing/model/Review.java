@@ -5,10 +5,17 @@ import java.util.Date;
 public class Review {
 	private int rcode;
 	private String email;
-	private String title;
 	private String contents;
 	private Date date;
 	
+	private String name;
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
 	public int getRcode() {
 		return rcode;
 	}
@@ -20,12 +27,6 @@ public class Review {
 	}
 	public void setEmail(String email) {
 		this.email = email;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
 	}
 	public String getContents() {
 		return contents;

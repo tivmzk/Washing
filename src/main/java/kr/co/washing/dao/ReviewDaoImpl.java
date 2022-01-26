@@ -29,4 +29,14 @@ public class ReviewDaoImpl implements ReviewDao {
 		sql.delete("review.delete", rcode);
 	}
 
+	@Override
+	public void add(Review item) {
+		sql.insert("review.add", item);
+	}
+
+	@Override
+	public Review item(int rcode) {
+		return sql.selectOne("review.item", rcode);
+	}
+
 }
