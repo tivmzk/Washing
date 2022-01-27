@@ -17,4 +17,6 @@ public interface ReviewDao {
 
 	Review item(int rcode);
 
+	List<Review> listAll();
+
 }

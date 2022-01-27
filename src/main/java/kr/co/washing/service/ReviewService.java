@@ -15,4 +15,6 @@ public interface ReviewService {
 
 	Review item(int code);
 
+	List<Review> listAll();
+
 }

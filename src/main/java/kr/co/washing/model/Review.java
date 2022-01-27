@@ -1,6 +1,7 @@
 package kr.co.washing.model;
 
 import java.util.Date;
+import java.util.List;
 
 public class Review {
 	private int rcode;
@@ -9,7 +10,14 @@ public class Review {
 	private Date date;
 	
 	private String name;
+	private List<ReviewImage> images;
 	
+	public List<ReviewImage> getImages() {
+		return images;
+	}
+	public void setImages(List<ReviewImage> images) {
+		this.images = images;
+	}
 	public String getName() {
 		return name;
 	}
@@ -39,5 +47,13 @@ public class Review {
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	public String getThumbnail() {
+		if(images.size() == 0) {
+			return "/re/img/logo.png";
+		}
+		else {
+			return "/upload/"+images.get(0).getFullname();
+		}
 	}
 }

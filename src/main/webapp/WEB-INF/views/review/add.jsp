@@ -7,7 +7,7 @@
 		<input type="hidden" name="email" value="${sessionScope.user.email}"/>
 		<textarea name="contents">리뷰를 작성하세요</textarea>
 		
-		<input type="file" />
+		<input type="file" name="reviewImages"/>
 		<button class="btn confirm-btn" type="submit">확인</button>
 	</form>
 </div>

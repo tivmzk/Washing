@@ -23,7 +23,7 @@
 		
 		<li class="block-link" data-code="${item.rcode}">
 			<div>
-				<img src=""/>
+				<img src="${item.thumbnail}"/>
 			</div>
 			<div>
 				<strong>${item.name}</strong>

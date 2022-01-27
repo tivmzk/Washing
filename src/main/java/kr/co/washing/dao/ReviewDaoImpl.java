@@ -39,4 +39,9 @@ public class ReviewDaoImpl implements ReviewDao {
 		return sql.selectOne("review.item", rcode);
 	}
 
+	@Override
+	public List<Review> listAll() {
+		return sql.selectList("review.listAll");
+	}
+
 }
