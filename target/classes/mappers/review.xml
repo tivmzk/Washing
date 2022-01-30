@@ -26,10 +26,12 @@
 			SELECT LAST_INSERT_ID()
 		</selectKey>
 	</insert>
-	<select id="item" resultType="Review">
-		SELECT review.*, member.name
+	<select id="item" resultMap="ReviewMap">
+		SELECT review.*, member.name,
+		thumbnail.tcode, thumbnail.rcode AS trcode, thumbnail.filename, thumbnail.uuid
 		FROM review
-		JOIN member USING(email) 
+		JOIN member USING(email)
+		LEFT JOIN thumbnail USING(rcode)
 		WHERE rcode=#{rcode}
 	</select>
 	<select id="total" resultType="Integer">
