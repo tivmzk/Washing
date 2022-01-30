@@ -9,7 +9,7 @@ public interface ReviewService {
 
 	List<Review> list(Pager pager);
 
-	void delete(String rcode);
+	void delete(int rcode);
 
 	void add(Review item);
 

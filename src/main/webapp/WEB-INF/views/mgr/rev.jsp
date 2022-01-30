@@ -6,8 +6,9 @@
 	<thead>
 		<tr>
 			<th>일련번호</th>
+			<th>이메일</th>
 			<th>작성자</th>
-			<th>제목</th>
+			<th>내용</th>
 			<th>날짜</th>
 			<th>관리</th>
 		</tr>

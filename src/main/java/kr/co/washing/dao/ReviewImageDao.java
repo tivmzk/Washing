@@ -6,4 +6,6 @@ public interface ReviewImageDao {
 
 	void add(ReviewImage image);
 
+	void delete(int tcode);
+
 }

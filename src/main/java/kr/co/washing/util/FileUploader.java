@@ -32,4 +32,14 @@ public class FileUploader {
 		
 		return list;
 	}
+	
+	public void delete(String filename) {
+		File file = new File(UPLOAD_PATH+filename);
+		if(file.exists()) {
+			file.delete();
+		}
+		else {
+			System.out.println(UPLOAD_PATH+filename+" 파일이 없습니다.");
+		}
+	}
 }

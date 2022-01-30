@@ -79,7 +79,7 @@ public class ManagerController {
 		return path + "rev.mgr";
 	}
 	@GetMapping("/rev/delete/{rcode}")
-	public String review(@PathVariable String rcode, int page) {
+	public String review(@PathVariable int rcode, int page) {
 		rs.delete(rcode);
 		return "redirect:/mgr/rev?page="+page;
 	}

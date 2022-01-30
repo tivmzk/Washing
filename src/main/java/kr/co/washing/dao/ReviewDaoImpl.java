@@ -25,7 +25,7 @@ public class ReviewDaoImpl implements ReviewDao {
 	}
 
 	@Override
-	public void delete(String rcode) {
+	public void delete(int rcode) {
 		sql.delete("review.delete", rcode);
 	}
 

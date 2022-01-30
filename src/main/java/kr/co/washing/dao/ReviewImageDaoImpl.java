@@ -16,4 +16,9 @@ public class ReviewImageDaoImpl implements ReviewImageDao {
 		sql.insert("reviewImage.add", image);
 	}
 
+	@Override
+	public void delete(int tcode) {
+		sql.delete("reviewImage.delete", tcode);
+	}
+
 }

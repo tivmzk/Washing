@@ -10,6 +10,7 @@ import kr.co.washing.dao.ReviewDao;
 import kr.co.washing.dao.ReviewImageDao;
 import kr.co.washing.model.Review;
 import kr.co.washing.model.ReviewImage;
+import kr.co.washing.util.FileUploader;
 import kr.co.washing.util.Pager;
 
 @Service
@@ -25,10 +26,18 @@ public class ReviewServiceImpl implements ReviewService {
 		pager.setTotal(total);
 		return dao.list(pager);
 	}
-
+	
+	@Transactional
 	@Override
-	public void delete(String rcode) {
-		dao.delete(rcode);
+	public void delete(int rcode) {
+		Review item = item(rcode);
+		
+		FileUploader uploader = new FileUploader();
+		for(ReviewImage image : item.getImages()) {
+			imageDao.delete(image.getTcode());
+			uploader.delete(image.getFullname());
+		}
+		dao.delete(rcode);		
 	}
 	
 	@Transactional
