@@ -13,6 +13,12 @@
 	<link rel="stylesheet" href="/re/css/layout_main.css" />
 	<link rel="stylesheet" href="/re/css/elements.css" />
 	<link rel="shortcut icon" href="/re/img/logo.png" />
+	
+	<script>
+		const msg = `${warn}`;
+		if(msg)
+			alert(msg);
+	</script>
 </head>
 <body class="back-gray">
 	<header id="header">

@@ -38,6 +38,26 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
+	<interceptors>
+		<interceptor>
+			<mapping path="/sub"/>
+			<mapping path="/review/add"/>
+			<mapping path="/mgr/**"/>
+			
+			<beans:bean class="kr.co.washing.intercepter.LoginIntercepter"/>
+		</interceptor>
+		<interceptor>
+			<mapping path="/ac/**"/>
+			<exclude-mapping path="/ac/logout"/>
+			<beans:bean class="kr.co.washing.intercepter.UnloginIntercepter"/>
+		</interceptor>
+		<interceptor>
+			<mapping path="/mgr/**"/>
+			
+			<beans:bean class="kr.co.washing.intercepter.MgrIntercepter"/>
+		</interceptor>
+	</interceptors>
+	
 	<beans:bean id="naverLoginVO" class="kr.co.washing.model.NaverLoginVO" />
 	 
 	<context:component-scan base-package="kr.co.washing" />
