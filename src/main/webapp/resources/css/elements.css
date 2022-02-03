@@ -394,3 +394,55 @@
 	height: 95px;
 	overflow: hidden;
 }
+/* 로그인 선택창 */
+.back-gray{
+	background: #f8f8f8;
+}
+.back-white{
+	background: var(--color-white);
+}
+.pos-re{
+	position: relative;
+}
+.pos-center{
+	transform: translate(-50%, -50%);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.radius-box{
+	border-radius: 15px;
+}
+.select-list{
+	border-radius: 15px;
+	background: var(--color-white);
+	padding: 45px 50px;
+}
+.select-list > li{
+	position: relative;
+}
+.select-list > li > img{
+	position: absolute;
+	left: 40px;
+	top: 50%;
+	transform: translate(0, -50%);
+	width: 30px;
+	height: 30px;
+}
+.select-list > li:not(:first-child){
+	padding: 15px 0;
+	text-align: center;
+}
+.select-list > li:first-child{
+	padding-bottom: 30px;
+}
+.select-list > li > a{
+	width: 500px;
+	border: var(--color-gray) solid 1px;
+	border-radius: 80px;
+	padding: 30px 0;
+	display: block;
+	cursor: pointer;
+	font-weight: var(--font-weight-medium);
+	font-size: var(--font-size-large);
+}

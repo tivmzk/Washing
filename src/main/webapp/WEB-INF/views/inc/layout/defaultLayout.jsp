@@ -14,7 +14,7 @@
 	<link rel="stylesheet" href="/re/css/elements.css" />
 	<link rel="shortcut icon" href="/re/img/logo.png" />
 </head>
-<body>
+<body class="back-gray">
 	<header id="header">
 		<tiles:insertAttribute name="header" />
 	</header>

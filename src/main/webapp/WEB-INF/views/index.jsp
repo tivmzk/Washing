@@ -15,8 +15,8 @@
 	<p class="font-bold font-xlarge">이제 <span class="confirm-text">세탁</span>도 <span class="sub-text">구독</span>하세요</p>
 	<a href="sub" class="btn sub-btn">구독하러 가기</a>
 </div>
-<div class="bound p-20">
-	<div class="p-20 flex">
+<div class="p-20 back-white">
+	<div class="bound p-20 flex">
 		<div class="card flex">
 			<div class="ratio-6"><img src="/re/img/truck.png"/></div>
 			<div class="card-text flex dir-col justify-center ratio-4">
@@ -25,7 +25,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="p-20 flex justify-end">
+	<div class="bound p-20 flex justify-end">
 		<div class="card flex">
 			<div class="card-text flex dir-col justify-center ratio-4">
 				<p class="comment-text font-reguler font-small">원하는 날짜를 선택</p>
