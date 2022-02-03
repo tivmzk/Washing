@@ -56,4 +56,14 @@ public class Review {
 			return "/upload/"+images.get(0).getFullname();
 		}
 	}
+	public String getMaskname() {
+		String result = "";
+		String first = name.substring(0, 1);
+		String mask = "";
+		for(int i = 0; i < name.length() - 1; i++) {
+			mask += "*";
+		}
+		result = first + mask;
+		return result;
+	}
 }

@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import kr.co.washing.model.Faq;
+import kr.co.washing.model.Review;
 import kr.co.washing.model.Subscription;
 import kr.co.washing.service.FaqService;
+import kr.co.washing.service.ReviewService;
 import kr.co.washing.service.SubscriptionService;
 import kr.co.washing.util.Pager;
 
@@ -20,9 +22,13 @@ public class RootController {
 	SubscriptionService ss;
 	@Autowired
 	FaqService fs;
+	@Autowired
+	ReviewService rs;
 	
 	@GetMapping("/")
-	public String index() {
+	public String index(Model model) {
+		List<Review> list = rs.listAll();
+		model.addAttribute("list", list);
 		return "index.main";
 	}
 	

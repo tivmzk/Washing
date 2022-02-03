@@ -34,6 +34,12 @@
 	--color-confirm-active: #1d2988;
 	--color-confirm: #254097;
 	--color-gray: #e6e6e6;
+	--color-gray-active: #ececec;
+	--color-sub: #aa1d24;
+	--color-sub-hover: #b62737;
+	--color-sub-active: #9d1717;
+	--color-comment: #e96a03;
+	--color-gray-text: #aaaaaa;
 }
 
 *{
