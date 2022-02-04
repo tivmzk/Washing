@@ -10,6 +10,9 @@
 .text-left{
 	text-align: left;
 }
+.link-deco:hover{
+	text-decoration: underline;
+}
 
 
 /* 플렉스 */
@@ -267,6 +270,25 @@
 	padding: 30px 0px;
 }
 
+.px-5{
+	padding: 0px 5px;
+}
+.px-10{
+	padding: 0px 10px;
+}
+.px-15{
+	padding: 0px 15px;
+}
+.px-20{
+	padding: 0px 20px;
+}
+.px-25{
+	padding: 0px 25px;
+}
+.px-30{
+	padding: 0px 30px;
+}
+
 .pb-5{
 	padding-bottom: 5px;
 }
@@ -445,4 +467,39 @@
 	cursor: pointer;
 	font-weight: var(--font-weight-medium);
 	font-size: var(--font-size-large);
+}
+
+/* 로그인 */
+.login-form{
+	border-radius: 15px;
+	background: var(--color-white);
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
+	padding: 30px 50px;
+}
+.login-form .title{
+	font-weight: var(--font-weight-bold);
+	font-size: var(--font-size-xxlarge);
+	padding-bottom: 30px;
+	text-align: center;
+	border-bottom: 1px solid var(--color-gray);
+}
+.login-form .input{
+	width: 500px;
+	border: none;
+	border-bottom: var(--color-gray) 1px solid;
+	outline: none;
+	font-weight: var(--font-weight-medium);
+	font-size: var(--font-size-large);
+	padding: 15px 5px;
+	margin: 15px 0px;
+}
+.login-form .submit{
+	width: 100%;
+	border-radius: 50px;
+	padding: 20px 0;
+	font-size: var(--font-size-large);
+	font-weight: var(--font-weight-medium);
 }
