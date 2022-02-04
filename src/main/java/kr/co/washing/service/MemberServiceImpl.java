@@ -35,5 +35,9 @@ public class MemberServiceImpl implements MemberService {
 	public void update(Member item) {
 		dao.update(item);
 	}
-
+	
+	@Override
+	public int total(Pager pager) {
+		return dao.total(pager);
+	}
 }

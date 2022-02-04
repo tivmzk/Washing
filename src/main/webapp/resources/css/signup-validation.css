@@ -1,0 +1,13 @@
+@charset "UTF-8";
+#valid-form .ok{
+	background-image: url('/re/svg/ok.svg');
+	background-position: center right 15px;
+	background-repeat: no-repeat;
+	background-size: 25px;
+}
+#valid-form .no{
+	background-image: url('/re/svg/x.svg');
+	background-position: center right 15px;
+	background-repeat: no-repeat;
+	background-size: 25px;
+}

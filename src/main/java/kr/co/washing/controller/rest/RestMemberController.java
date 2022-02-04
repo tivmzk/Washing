@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import kr.co.washing.model.Member;
 import kr.co.washing.service.MemberService;
 import kr.co.washing.util.LevelConfig;
+import kr.co.washing.util.Pager;
 
 @RequestMapping("/rest/mem")
 @RestController
@@ -30,5 +31,19 @@ public class RestMemberController {
 	@GetMapping
 	public List<Integer> levelList(){
 		return LevelConfig.getLevelList();
+	}
+	
+	@GetMapping("/email")
+	public String confirm(String id) {
+		Pager pager = new Pager();
+		pager.setKeyword(id);
+		pager.setSearch(1);
+		int cnt = service.total(pager);
+		if(cnt == 0) {
+			return "ok";
+		}
+		else {
+			return "no";
+		}
 	}
 }

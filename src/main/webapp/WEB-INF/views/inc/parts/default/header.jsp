@@ -20,8 +20,8 @@
 		<c:choose>
 			<c:when test="${sessionScope.user != null}">
 				<div class="user-name">
-					<span>${sessionScope.user.name}</span>님
-					<a href="/ac/logout">로그아웃</a>
+					<span class="px-5">${sessionScope.user.name}</span>님
+					<a class="link-deco px-5" href="/ac/logout">로그아웃</a>
 				</div>
 			</c:when>
 			<c:otherwise>

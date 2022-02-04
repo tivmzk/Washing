@@ -17,4 +17,6 @@ public interface MemberService {
 
 	void update(Member item);
 
+	int total(Pager pager);
+
 }
