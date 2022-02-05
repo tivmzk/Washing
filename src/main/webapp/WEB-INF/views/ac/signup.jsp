@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     
-<link rel="stylesheet" href="/re/css/signup-validation.css" />
+<link rel="stylesheet" href="/re/css/signup_validation.css" />
 <script>
 	const path = '/rest/mem/email';
 </script>
-<script src="/re/js/signup-validation.js"></script>
+<script src="/re/js/signup_validation.js"></script>
 <form method="post" class="signup-form" id="valid-form">
 	<ul>
 		<li class="title">회원가입</li>

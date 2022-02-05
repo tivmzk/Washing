@@ -144,6 +144,7 @@
 	height: 100%;
 }
 
+
 .w-100p{
 	width: 100%;
 }
@@ -269,6 +270,18 @@
 .py-30{
 	padding: 30px 0px;
 }
+.py-35{
+	padding: 35px 0px;
+}
+.py-40{
+	padding: 40px 0px;
+}
+.py-45{
+	padding: 45px 0px;
+}
+.py-50{
+	padding: 50px 0px;
+}
 
 .px-5{
 	padding: 0px 5px;
@@ -287,6 +300,18 @@
 }
 .px-30{
 	padding: 0px 30px;
+}
+.px-35{
+	padding: 0px 35px;
+}
+.px-40{
+	padding: 0px 40px;
+}
+.px-45{
+	padding: 0px 45px;
+}
+.px-50{
+	padding: 0px 50px;
 }
 
 .pb-5{
@@ -307,6 +332,18 @@
 .pb-30{
 	padding-bottom: 30px;
 }
+.pb-35{
+	padding-bottom: 35px;
+}
+.pb-40{
+	padding-bottom: 40px;
+}
+.pb-45{
+	padding-bottom: 45px;
+}
+.pb-50{
+	padding-bottom: 50px;
+}
 
 .pt-5{
 	padding-top: 5px;
@@ -326,6 +363,80 @@
 .pt-30{
 	padding-top: 30px;
 }
+.pt-35{
+	padding-top: 35px;
+}
+.pt-40{
+	padding-top: 40px;
+}
+.pt-45{
+	padding-top: 45px;
+}
+.pt-50{
+	padding-top: 50px;
+}
+
+.pr-5{
+	padding-right: 5px;
+}
+.pr-10{
+	padding-right: 10px;
+}
+.pr-15{
+	padding-right: 15px;
+}
+.pr-20{
+	padding-right: 20px;
+}
+.pr-25{
+	padding-right: 25px;
+}
+.pr-30{
+	padding-right: 30px;
+}
+.pr-35{
+	padding-right: 35px;
+}
+.pr-40{
+	padding-right: 40px;
+}
+.pr-45{
+	padding-right: 45px;
+}
+.pr-50{
+	padding-right: 50px;
+}
+
+.pl-5{
+	padding-left: 5px;
+}
+.pl-10{
+	padding-left: 10px;
+}
+.pl-15{
+	padding-left: 15px;
+}
+.pl-20{
+	padding-left: 20px;
+}
+.pl-25{
+	padding-left: 25px;
+}
+.pl-30{
+	padding-left: 30px;
+}
+.pl-35{
+	padding-left: 35px;
+}
+.pl-40{
+	padding-left: 40px;
+}
+.pl-45{
+	padding-left: 45px;
+}
+.pl-50{
+	padding-left: 50px;
+}
 
 .p-5{
 	padding: 5px;
@@ -344,6 +455,25 @@
 }
 .p-30{
 	padding: 30px;
+}
+.p-35{
+	padding: 35px;
+}
+.p-40{
+	padding: 40px;
+}
+.p-45{
+	padding: 45px;
+}
+.p-50{
+	padding: 50px;
+}
+
+.bb-1{
+	border-bottom: 1px solid var(--color-gray-text);
+}
+.bt-1{
+	border-top: 1px solid var(--color-gray-text);
 }
 
 /*index*/
@@ -418,7 +548,7 @@
 }
 /* 로그인 선택창 */
 .back-gray{
-	background: #f8f8f8;
+	background: #ebebeb;
 }
 .back-white{
 	background: var(--color-white);
@@ -467,6 +597,39 @@
 	cursor: pointer;
 	font-weight: var(--font-weight-medium);
 	font-size: var(--font-size-large);
+}
+
+/* 입력칸 */
+.input-wrapper input{
+	display: block;
+	background: #f7f7f7;
+	border: none;
+	padding: 15px 10px;
+	margin: 15px 0px;
+	border-radius: 15px;
+	font-size: var(--font-size-normal);
+}
+.input-wrapper label{
+	display: block;
+	color: #4f4f4f;
+	font-size: var(--font-size-small);
+}
+.radio-wrapper{
+	position: relative;
+}
+.radio-wrapper input[type="radio"]{
+	position: absolute;
+	left: 30px;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+.radio-wrapper label{
+	border-radius: 15px;
+	border: 2px solid var(--color-gray-text);
+	padding: 15px 50px 15px 40px;
+}
+.radio-wrapper input[type="radio"]:checked + label{
+	border: 2px solid var(--color-point);
 }
 
 /* 로그인 */
@@ -533,4 +696,31 @@
 	margin: 15px 0px;
 	border-radius: 15px;
 	font-size: var(--font-size-normal);
+}
+.search-wrapper{
+	position: relative;
+}
+.search-wrapper input{
+	background: #f7f7f7;
+	border: none;
+	padding: 15px 50px 15px 15px;
+	margin: 15px 0px;
+	border-radius: 15px;
+	font-size: var(--font-size-normal);
+}
+.search-wrapper img{
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translate(0, -50%);
+}
+.no-drag{
+	-webkit-user-drag: none;
+}
+.hover-pointer:hover{
+	cursor: pointer;
+	background: var(--color-gray);
+}
+.hover-pointer:hover .hover-text{
+	color: var(--color-black);
 }
