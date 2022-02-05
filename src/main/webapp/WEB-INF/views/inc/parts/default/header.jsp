@@ -4,7 +4,7 @@
     
 <div class="bound flex justify-between">
 	<div class="ratio-2">
-		<a href="/"><img src="/re/img/logo.png" alt="워싱" /></a>
+		<a href="/"><img src="/re/svg/logo.svg" alt="워싱" /></a>
 	</div>
 	<div class="ratio-8 flex item-center">
 		<ul class="nav">

@@ -12,18 +12,27 @@
 	});
 </script>
   
-<div class="bound">
-	<h1>워싱한 후기</h1>
-	<div>
-		<div><span><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd"/></span></div>
+<div class="bound pb-50">
+	<h1 class="text-center font-title font-bold py-30">워싱한 후기</h1>
+	<div class="radius-box back-white p-30">
+		<div class="text-right pb-10">
+			<span class="font-small font-medium gray-text"><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd"/></span>
+		</div>
 		<div>
 			<ul class="slider">
-				<c:forEach items="${item.images}" var="image">
-					<img src="/upload/${image.fullname}" alt="${image.filename}" />
-				</c:forEach>
+				<c:choose>
+					 <c:when test="${item.images.size() == 0}">
+					 	<img src="${item.thumbnail}" alt="이미지" />
+					 </c:when>
+					 <c:otherwise>
+						<c:forEach items="${item.images}" var="image">
+							<img src="/upload/${image.fullname}" alt="${image.filename}" />
+						</c:forEach> 
+					 </c:otherwise>
+				</c:choose>
 			</ul>
 		</div>
-		<div><span>${item.name}</span></div>
+		<div class="pb-15"><span class="font-small font-medium gray-text">${item.maskname}님</span></div>
 		<div><p>${item.contents}</p></div>
 	</div>
 </div>

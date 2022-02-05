@@ -10,10 +10,10 @@
 		<div class="pb-30">
 			<h2 class="font-bold font-xlarge py-20">서비스 주기</h2>
 			<ul class="flex pt-20">
-				<li class="radio-wrapper px-15"><input id="1" type="radio" value="1" name="week" checked/><label for="1" class="font-large">1주일</label></li>
-				<li class="radio-wrapper px-15"><input id="2" type="radio" value="2" name="week"/><label for="2" class="font-large">2주일</label></li>
-				<li class="radio-wrapper px-15"><input id="3" type="radio" value="3" name="week"/><label for="3" class="font-large">3주일</label></li>
-				<li class="radio-wrapper px-15"><input id="4" type="radio" value="4" name="week"/><label for="4" class="font-large">4주일</label></li>
+				<li class="radio-wrapper px-15"><input id="1" type="radio" value="1" name="week" checked/><label for="1" class="font-large hover-pointer">1주일</label></li>
+				<li class="radio-wrapper px-15"><input id="2" type="radio" value="2" name="week"/><label for="2" class="font-large hover-pointer">2주일</label></li>
+				<li class="radio-wrapper px-15"><input id="3" type="radio" value="3" name="week"/><label for="3" class="font-large hover-pointer">3주일</label></li>
+				<li class="radio-wrapper px-15"><input id="4" type="radio" value="4" name="week"/><label for="4" class="font-large hover-pointer">4주일</label></li>
 			</ul>
 		</div>
 		<div>

@@ -19,6 +19,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import kr.co.washing.model.Member;
 import kr.co.washing.model.NaverLoginVO;
 import kr.co.washing.service.MemberService;
+import kr.co.washing.util.Pager;
 import kr.co.washing.util.SiteLoginer;
 
 @RequestMapping("/ac")
@@ -78,6 +79,15 @@ public class AcountController {
 	public String naverCallback(Model model, @RequestParam String code, @RequestParam String state, HttpSession session)
 			throws IOException, ParseException {
 		Member user = SiteLoginer.naver(session, code, state, naverLoginVO);
+		
+		Pager pager = new Pager();
+		pager.setKeyword(user.getEmail());
+		pager.setSearch(1);
+		int cnt = service.total(pager);
+		
+		if(cnt == 0) {
+			service.add(user);
+		}
 
 		// 4.파싱 닉네임 세션으로 저장
 		session.setAttribute("user", user); // 세션 생성
@@ -89,7 +99,16 @@ public class AcountController {
 	public String googleAuth(Model model, @RequestParam(value = "code") String authCode, HttpSession session)
 			throws JsonProcessingException {
 		Member user = SiteLoginer.google(authCode);
-
+		
+		Pager pager = new Pager();
+		pager.setKeyword(user.getEmail());
+		pager.setSearch(1);
+		int cnt = service.total(pager);
+		
+		if(cnt == 0) {
+			service.add(user);
+		}
+		
 		session.setAttribute("user", user);
 
 		return "redirect:/";

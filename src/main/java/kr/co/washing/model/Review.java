@@ -50,7 +50,7 @@ public class Review {
 	}
 	public String getThumbnail() {
 		if(images.size() == 0) {
-			return "/re/img/logo.png";
+			return "/re/img/thumbnail.jpg";
 		}
 		else {
 			return "/upload/"+images.get(0).getFullname();
