@@ -6,7 +6,7 @@
 	<form method="post" enctype="multipart/form-data">
 		<h1>리뷰</h1>
 		<input type="hidden" name="email" value="${sessionScope.user.email}"/>
-		<textarea name="contents" placeholder="리뷰를 입력해주세요"></textarea>
+		<textarea required name="contents" placeholder="리뷰를 입력해주세요"></textarea>
 		
 		<div class="hidden input-box">
 		</div>

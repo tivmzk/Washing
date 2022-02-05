@@ -21,19 +21,19 @@
 			<ul>
 				<li class="input-wrapper">
 					<label>받는 사람</label>
-					<input class="w-100p" type="text" placeholder="이름을 입력하세요" name="recipient"/>
+					<input required class="w-100p" type="text" placeholder="이름을 입력하세요" name="recipient"/>
 				</li>
 				<li class="input-wrapper">
 					<label>휴대폰 번호</label>
-					<input class="w-100p" type="tel" placeholder="휴대폰 번호(-포함 입력하세요)" name="tel"/>
+					<input required class="w-100p" type="tel" placeholder="휴대폰 번호(-포함 입력하세요)" name="tel"/>
 				</li>
 				<li class="input-wrapper">
 					<label>주소</label>
-					<input class="w-100p" type="text" placeholder="주소를 입력하세요" name="address"/>
+					<input required class="w-100p" type="text" placeholder="주소를 입력하세요" name="address"/>
 				</li>
 				<li class="input-wrapper">
 					<label>요청사항</label>
-					<input class="w-100p" type="text" placeholder="예)문앞에 놔두세요" name="request"/>
+					<input required class="w-100p" type="text" placeholder="예)문앞에 놔두세요" name="request"/>
 				</li>
 			</ul>
 		</div>
