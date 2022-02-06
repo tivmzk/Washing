@@ -43,6 +43,7 @@
 			<mapping path="/sub"/>
 			<mapping path="/review/add"/>
 			<mapping path="/mgr/**"/>
+			<mapping path="/profile"/>
 			
 			<beans:bean class="kr.co.washing.intercepter.LoginIntercepter"/>
 		</interceptor>

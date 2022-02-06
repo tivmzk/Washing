@@ -490,6 +490,9 @@
 .b-g{
 	border-color: var(--color-gray);
 }
+.bb-none{
+	border-bottom: none;
+}
 
 /*index*/
 .main_visual{
@@ -770,12 +773,17 @@
 .h-95{
 	height: 95px;
 }
+.w-50{
+	width: 50px;
+}
 .table{
 	width: 100%;
 	border-collapse: collapse;
 }
-.table th:first-child{
-	width: 50px;
+.table thead{
+	border-bottom: 1px solid var(--color-gray-text);
+}
+.table th:not(:last-child){	
 	border-right: 1px solid var(--color-gray-text);
 }
 .table th{
@@ -784,6 +792,8 @@
 }
 .table td:first-child {
 	text-align: center;
+}
+.table td:not(:last-child){
 	border-right: 1px solid var(--color-gray-text);
 }
 .table td {

@@ -1,7 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    
+<script src="/re/js/user_menu.js"></script>
+<link rel="stylesheet" href="/re/css/user_menu.css" />
 <div class="bound flex justify-between">
 	<div class="ratio-2">
 		<a href="/"><img src="/re/svg/logo.svg" alt="워싱" /></a>
@@ -20,8 +21,7 @@
 		<c:choose>
 			<c:when test="${sessionScope.user != null}">
 				<div class="user-name">
-					<span class="px-5">${sessionScope.user.name}</span>님
-					<a class="link-deco px-5" href="/ac/logout">로그아웃</a>
+					<span class="menu-btn">${sessionScope.user.name}</span>님
 				</div>
 			</c:when>
 			<c:otherwise>
@@ -30,3 +30,7 @@
 		</c:choose>
 	</div>
 </div>
+<ul class="user-menu">
+	<li><a href="/profile">구독 상세</a></li>
+	<li><a class="link-deco px-5" href="/ac/logout">로그아웃</a></li>
+</ul>

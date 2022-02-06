@@ -23,7 +23,7 @@
 			<table class="input-table table">
 				<thead class="pos-top">
 					<tr>
-						<th><input type="checkbox" /></th>
+						<th class="w-50"><input type="checkbox" /></th>
 						<th>파일명</th>
 					</tr>
 				</thead>
