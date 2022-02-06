@@ -33,6 +33,6 @@
 			</ul>
 		</div>
 		<div class="pb-15"><span class="font-small font-medium gray-text">${item.maskname}님</span></div>
-		<div><p>${item.contents}</p></div>
+		<div>${item.contents}</div>
 	</div>
 </div>

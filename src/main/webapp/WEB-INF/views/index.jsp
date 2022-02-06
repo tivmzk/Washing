@@ -2,9 +2,29 @@
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+
 <script>
 	const path = '/review';
+	
+	$(function(){
+		const swiper = new Swiper('.swiper', {
+			direction: 'horizontal',
+			spaceBetween: 30,
+			loop:true,
+			loopAdditionalSlides:7
+		});	
+	})
 </script>
+<style>
+	.swiper{
+		width: 300px;
+		height: 410px;
+	}
+</style>
+
 <script src="/re/js/block_link.js"></script>
 <div class="main_visual">
 	<img src="/re/img/main_visual.jpg"/>
@@ -38,18 +58,22 @@
 <div class="review-wrapper">
 	<p class="comment-text font-medium font-large text-center">고민하지 마세요</p>
 	<p class="py-15 font-bold font-xlarge text-center">이미 많은 분들이<br>워싱을 시작했어요</p>
-	<div class="flex">
-		<c:forEach items="${list}" var="item">
-			<div class="review-card block-link" data-code="${item.rcode}">
-				<div><img src="${item.thumbnail}" /></div>
-				<div>
-					<span class="font-large font-medium">${item.maskname}</span>
-					<p class="py-10 gray-text font-small font-medium">${item.contents}</p>
-					<div class="text-right">
-						<span class="font-small font-medium gray-text"><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd"/></span>
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<c:forEach items="${list}" var="item">
+				<div class="swiper-slide">
+					<div class="review-card block-link" data-code="${item.rcode}">
+						<div><img src="${item.thumbnail}" /></div>
+						<div>
+							<span class="font-large font-medium">${item.maskname}님</span>
+							<div class="py-10 gray-text font-small font-medium h-95 over-hidden">${item.contents}</div>
+							<div class="text-right">
+								<span class="font-small font-medium gray-text"><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd"/></span>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</c:forEach>
+			</c:forEach>
+		</div>
 	</div>
 </div>

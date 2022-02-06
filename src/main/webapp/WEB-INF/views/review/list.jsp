@@ -25,21 +25,23 @@
 	</div>
 </div>
 <div class="back-white">
-	<ul class="flex bound justify-center">
-		<c:forEach items="${list}" var="item">
-			
-			<li class="block-link review-card" data-code="${item.rcode}">
-				<div>
-					<img src="${item.thumbnail}"/>
-				</div>
-				<div>
-					<span class="font-large font-medium">${item.maskname}</span>
-					<p  class="py-10 gray-text font-small font-medium">${item.contents}</p>
-					<div class="text-right">
-							<span class="font-small font-medium gray-text"><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd"/></span>
+	<ul class="flex wrap px-5 bound">
+			<c:forEach items="${list}" var="item">
+				
+				<li class="block-link review-card" data-code="${item.rcode}">
+					<div>
+						<img src="${item.thumbnail}"/>
+					</div>
+					<div>
+						<span class="font-large font-medium">${item.maskname}님</span>
+						<div class="py-10 gray-text font-small font-medium h-95 over-hidden">
+							${item.contents}
 						</div>
-				</div>
-			</li>
-		</c:forEach>
-	</ul>
+						<div class="text-right">
+								<span class="font-small font-medium gray-text"><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd"/></span>
+						</div>
+					</div>
+				</li>
+			</c:forEach>
+		</ul>
 </div>

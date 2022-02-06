@@ -49,6 +49,12 @@ public class ReviewController {
 		FileUploader uploader = new FileUploader();
 		List<ReviewImage> list = uploader.upload(files);
 		item.setImages(list);
+		String contents = "";
+		String[] contentList = item.getContents().split("\n");
+		for(String content : contentList) {
+			contents += "<p>"+content+"</p>";
+		}
+		item.setContents(contents);
 		rs.add(item);
 		return "redirect:list";
 	}
