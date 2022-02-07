@@ -7,21 +7,24 @@
 	<sql id="search">
 		<where>
 			<if test="search == 1">
-				email LIKE CONCAT('%', #{keyword}, '%')
+				scode LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 			<if test="search == 2">
-				week LIKE CONCAT('%', #{keyword}, '%')
+				email LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 			<if test="search == 3">
-				tel LIKE CONCAT('%', #{keyword}, '%')
+				week LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 			<if test="search == 4">
-				address LIKE CONCAT('%', #{keyword}, '%')
+				tel LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 			<if test="search == 5">
-				request LIKE CONCAT('%', #{keyword}, '%')
+				address LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 			<if test="search == 6">
+				request LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="search == 7">
 				recipient LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 		</where>

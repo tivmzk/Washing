@@ -7,7 +7,7 @@
 	<sql id="search">
 		<where>
 			<if test="search == 1">
-				faq LIKE CONCAT('%', #{keyword}, '%')
+				fcode LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 			<if test="search == 2">
 				email LIKE CONCAT('%', #{keyword}, '%')

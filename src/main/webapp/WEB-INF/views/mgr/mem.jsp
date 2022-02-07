@@ -5,10 +5,23 @@
 	const max = 1;
 	const min = 0;
 	const path = '/rest/mem';
+	const init_path = "/mgr/mem";
 </script>
 <script src="/re/js/member_alt.js"></script>
+<script src="/re/js/search_init.js"></script>
 <div class="pos-center back-white p-20 radius-box">
-	<h1 class="font-bold font-title pb-20">회원 정보</h1>
+	<div class="flex justify-between item-center pb-20">
+		<h1 class="font-bold font-title pr-30">회원 정보</h1>
+		<form class="b-1 p-10 radius-box">
+			<select class="b-none outline-none search" name="search">
+				<option value="0" ${pager.search == 0 ? "selected" : ''}>처음으로</option>
+				<option value="1" ${pager.search == 1 ? "selected" : ''}>이메일</option>
+				<option value="2" ${pager.search == 2 ? "selected" : ''}>이름</option>
+				<option value="3" ${pager.search == 3 ? "selected" : ''}>레벨</option>
+			</select>
+			<input class="b-none outline-none" type="text" name="keyword" value="${pager.keyword}"/>
+		</form>
+	</div>
 	<div class="b-1 bb-none">
 		<table class="table">
 			<thead>

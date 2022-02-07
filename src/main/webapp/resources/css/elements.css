@@ -493,6 +493,12 @@
 .bb-none{
 	border-bottom: none;
 }
+.b-none{
+	border: none;
+}
+.outline-none{
+	outline: none;
+}
 
 /*index*/
 .main_visual{

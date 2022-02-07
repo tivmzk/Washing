@@ -7,12 +7,15 @@
 	<sql id="search">
 		<where>
 			<if test="search == 1">
-				email LIKE CONCAT('%', #{keyword}, '%')
+				rcode LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 			<if test="search == 2">
-				title LIKE CONCAT('%', #{keyword}, '%')
+				email LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 			<if test="search == 3">
+				name LIKE CONCAT('%', #{keyword}, '%')
+			</if>
+			<if test="search == 4">
 				contents LIKE CONCAT('%', #{keyword}, '%')
 			</if>
 		</where>

@@ -3,16 +3,34 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <script>
-	const path = "/rest/sub"
+	const path = "/rest/sub";
+	const init_path = "/mgr/sub";
 </script>
 <script src="/re/js/modal.js"></script>
+<script src="/re/js/search_init.js"></script>
 <div class="pos-center back-white p-20 radius-box">
-	<h1 class="font-bold font-title pb-20">구독 정보</h1>
+	<div class="flex justify-between item-center pb-20">
+		<h1 class="font-bold font-title pr-30">구독 정보</h1>
+		<form class="b-1 p-10 radius-box">
+			<select class="b-none outline-none search" name="search">
+				<option value="0" ${pager.search == 0 ? "selected" : ''}>처음으로</option>
+				<option value="1" ${pager.search == 1 ? "selected" : ''}>일련번호</option>
+				<option value="2" ${pager.search == 2 ? "selected" : ''}>이메일</option>
+				<option value="3" ${pager.search == 3 ? "selected" : ''}>서비스 주기</option>
+				<option value="4" ${pager.search == 4 ? "selected" : ''}>전화번호</option>
+				<option value="5" ${pager.search == 5 ? "selected" : ''}>주소</option>
+				<option value="6" ${pager.search == 6 ? "selected" : ''}>요청사항</option>
+				<option value="7" ${pager.search == 7 ? "selected" : ''}>받는 사람</option>
+			</select>
+			<input class="b-none outline-none" type="text" name="keyword" value="${pager.keyword}"/>
+		</form>
+	</div>
 	<div class="b-1 bb-none">
 		<table class="table">
 			<thead>
 				<tr>
 					<th>일련번호</th>
+					<th>받는 사람</th>
 					<th>이메일</th>
 					<th>서비스 주기</th>
 					<th>전화번호</th>
@@ -26,6 +44,7 @@
 				<c:forEach items="${list}" var="item">
 					<tr data-code="${item.scode}">
 						<td data-name="scode">${item.scode}</td>
+						<td data-name="recipient">${item.recipient}</td>
 						<td data-name="email">${item.email}</td>
 						<td data-name="week">${item.week}</td>
 						<td data-name="tel">${item.tel}</td>
