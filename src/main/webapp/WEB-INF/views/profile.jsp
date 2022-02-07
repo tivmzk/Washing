@@ -22,13 +22,13 @@
 			<tbody>
 				<c:forEach items="${list}" var="item">
 					<tr>
-						<td class="font-small text-center">${item.recipient}</td>
-						<td class="font-small text-center">${item.week}</td>
-						<td class="font-small text-center">${item.tel}</td>
-						<td class="font-small">${item.address}</td>
-						<td class="font-small over-hidden">${item.request}</td>
-						<td class="font-small text-center"><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd"/></td>
-						<td class="text-center"><a class="btn delete-btn mini-btn" href="profile/${item.scode}">구독 취소</a></td>
+						<td>${item.recipient}</td>
+						<td>${item.week}</td>
+						<td>${item.tel}</td>
+						<td>${item.address}</td>
+						<td class="over-hidden">${item.request}</td>
+						<td><fmt:formatDate value="${item.date}" pattern="yyyy-MM-dd"/></td>
+						<td><a class="btn delete-btn mini-btn" href="profile/${item.scode}">구독 취소</a></td>
 					</tr>
 				</c:forEach>
 			</tbody>

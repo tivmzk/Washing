@@ -24,7 +24,7 @@
 		<aside id="aside" class="ratio-1">
 			<tiles:insertAttribute name="aside" />
 		</aside>
-		<main id="main" class="ratio-9">
+		<main id="main" class="ratio-9 pos-re back-gray">
 			<tiles:insertAttribute name="main" />
 		</main>
 	</section>
