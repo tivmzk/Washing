@@ -58,7 +58,7 @@ public class RootController {
 	public String profile(Model model, HttpSession session, Pager pager) {
 		Member user = (Member) session.getAttribute("user");
 		pager.setKeyword(user.getEmail());
-		pager.setSearch(1);
+		pager.setSearch(2);
 		List<Subscription> list =  ss.list(pager);
 		model.addAttribute("list", list);
 		return "profile.main";

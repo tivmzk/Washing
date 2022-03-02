@@ -581,6 +581,9 @@
 .back-blue{
 	background: #e3ebf8;
 }
+.back-none{
+	background: none;
+}
 .pos-re{
 	position: relative;
 }
@@ -593,6 +596,11 @@
 .pos-top{
 	top: 0px;
 	position: sticky;
+}
+.pos-tr{
+	top: 10px;
+	right: 10px;
+	position: absolute;
 }
 .radius-box{
 	border-radius: 15px;
@@ -757,6 +765,9 @@
 }
 .no-drag{
 	-webkit-user-drag: none;
+}
+.hover-pointer-no-back:hover{
+	cursor: pointer;
 }
 .hover-pointer:hover{
 	cursor: pointer;

@@ -14,7 +14,7 @@
 			direction: 'horizontal',
 			spaceBetween: 30,
 			loop:true,
-			loopAdditionalSlides:7
+			loopAdditionalSlides:9
 		});	
 	})
 </script>
@@ -26,7 +26,7 @@
 </style>
 
 <script src="/re/js/block_link.js"></script>
-<div class="main_visual">
+<div class="main_visual over-hidden">
 	<img src="/re/img/main_visual.jpg"/>
 </div>
 <div class="sub-wrapper">
@@ -55,7 +55,7 @@
 		</div>
 	</div>
 </div>
-<div class="review-wrapper">
+<div class="review-wrapper over-hidden">
 	<p class="comment-text font-medium font-large text-center">고민하지 마세요</p>
 	<p class="py-15 font-bold font-xlarge text-center">이미 많은 분들이<br>워싱을 시작했어요</p>
 	<div class="swiper">

@@ -91,6 +91,10 @@
 			<input class="w-100p" name="scode" type="number" disabled="disabled"/>
 		</li>
 		<li class="input-wrapper">
+			<label>받는 사람</label>
+			<input class="w-100p" name="recipient" type="text" />
+		</li>
+		<li class="input-wrapper">
 			<label>서비스 주기</label>
 			<select name="week" class="select w-100p">
 				<option value="1">1</option>
